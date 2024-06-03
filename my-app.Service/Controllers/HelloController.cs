@@ -6,9 +6,16 @@ namespace my_app.Service.Controllers
     [Route("[controller]")]
     public class HelloController : ControllerBase
     {
-        [HttpGet]
-        [Route("hello")]
+        [HttpGet("hello")]
+        // [Route("hello")]
         public IActionResult GetHello()
+        {
+            return Ok("Hello, World!");
+        }
+    
+        [HttpGet("test")]
+        // [Route("hello")]
+        public IActionResult GetTest()
         {
             return Ok("Hello, World!");
         }
