@@ -17,7 +17,8 @@ namespace my_app.Service.Controllers
         // [Route("hello")]
         public IActionResult GetTest()
         {
-            return Ok("Hello, World!");
+            var value = System.Enviroment.GetEnviromentVarible("ENDPOINT_URL");
+            return Ok(value);
         }
     }
 }
