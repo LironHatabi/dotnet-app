@@ -1,4 +1,5 @@
 using Microsoft.AspNetCore.Mvc;
+using System.Environment;
 
 namespace my_app.Service.Controllers
 {
@@ -17,7 +18,7 @@ namespace my_app.Service.Controllers
         // [Route("hello")]
         public IActionResult GetTest()
         {
-            var value = System.Enviroment.GetEnviromentVarible("ENDPOINT_URL");
+            var value = System.Environment.GetEnvironmentVariable("ENDPOINT_URL");
             return Ok(value);
         }
     }
