@@ -1,5 +1,5 @@
 using Microsoft.AspNetCore.Mvc;
-using System.Environment;
+// using System;
 
 namespace my_app.Service.Controllers
 {
@@ -18,6 +18,7 @@ namespace my_app.Service.Controllers
         // [Route("hello")]
         public IActionResult GetTest()
         {
+
             var value = System.Environment.GetEnvironmentVariable("version");
             return Ok(value);
         }
